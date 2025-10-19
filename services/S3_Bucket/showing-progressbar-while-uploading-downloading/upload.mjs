@@ -1,5 +1,5 @@
 import { S3Client } from '@aws-sdk/client-s3';
-import { Upload } from '@aws-sdk/lib-storage';
+import { Upload } from '@aws-sdk/lib-storage'; // this is best library to show the progress bar 
 import { createReadStream } from 'node:fs';
 
 const s3Client = new S3Client({});
