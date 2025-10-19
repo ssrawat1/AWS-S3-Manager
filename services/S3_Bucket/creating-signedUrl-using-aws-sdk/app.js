@@ -4,7 +4,7 @@ import { readFile } from 'fs/promises';
 
 /* Upload Signed URL: */
 const uploadSignedUrl = await generateUploadSignedUrl({
-  bucketName: 'coder-army-pb-03',
+  bucketName: 'sanjay-pb-03 ',
   keyName: 'uploadSignedUrl.js',
   contentType: 'application/javascript',
 });
@@ -25,7 +25,7 @@ console.log(data);
 /* Download Signed URL: */
 
 const downloadSingedUrl = await generateDownloadSignedUrl({
-  bucketName: 'coder-army-pb-03',
+  bucketName: 'sanjay-pb-03',
   keyName: 'uploadSignedUrl.js',
 });
 
