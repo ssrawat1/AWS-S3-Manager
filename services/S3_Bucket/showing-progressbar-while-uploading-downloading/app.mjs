@@ -19,7 +19,7 @@ try {
   });
 
   s3Uploads.on('httpUploadProgress', ({ loaded, total }) => {
-    process.stdout.write(`\r Downloaded: ${((loaded / total) * 100).toFixed(2)} %`);
+    process.stdout.write(`\r Uploading: ${((loaded / total) * 100).toFixed(2)} %`);
   });
 
   const res = await s3Uploads.done();
