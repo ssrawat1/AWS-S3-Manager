@@ -16,6 +16,7 @@ export async function generateDownloadSignedUrl({ bucketName, keyName }) {
   const command = new GetObjectCommand({
     Bucket: bucketName,
     Key: keyName,
+    ResponseContentDisposition: `attachment;filename=${keyName}`,
   });
   return await getSignedUrl(s3Client, command, { expiresIn: 300 });
 }
