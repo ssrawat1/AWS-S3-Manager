@@ -7,13 +7,15 @@ import { readFile } from 'node:fs/promises';
 
 const cloudFrontDistributionDomain = process.env.CLOUD_FRONT_DISTRIBUTION_DOMAIN;
 
-const s3ObjectKey =process.env.S3_OBJECT_KEY;
+const s3ObjectKey = process.env.S3_OBJECT_KEY;
 
 const url = `${cloudFrontDistributionDomain}/${s3ObjectKey}`;
 
 const privateKey = await readFile('./private_key.pem', 'utf-8');
 
 const keyPairId = process.env.CLOUD_FRONT_KEY_PAIR_ID;
+
+console.log({ cloudFrontDistributionDomain, s3ObjectKey, keyPairId ,url});
 
 const signedUrl = getSignedUrl({
   url,
